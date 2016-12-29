@@ -115,3 +115,10 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# My aliases
+source ~/.bash_aliases
+
+# Execute ZSH
+export SHELL=$(which zsh)
+[ -z "$ZSH_VERSION" ] && exec "$SHELL" -l
