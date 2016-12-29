@@ -31,4 +31,4 @@ chmod +x install.sh
 ./install.sh
 ```
 
-*inspired by michaeljsmalley*
+*inspired by [michaeljsmalley's dotfiles repo](https://github.com/michaeljsmalley/dotfiles)*

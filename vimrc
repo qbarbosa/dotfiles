@@ -39,7 +39,7 @@ autocmd FileType ruby setlocal sw=2 ts=2 sts=2
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set t_Co=256              " enable 256-color mode.
 syntax enable             " enable syntax highlighting (previously syntax on).
-colorscheme molokai       " set colorscheme
+colorscheme desert       " set colorscheme
 
 " Prettify JSON files
 autocmd BufRead,BufNewFile *.json set filetype=json
@@ -69,7 +69,7 @@ augroup END
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " set number                " show line numbers
 " set numberwidth=6         " make the number gutter 6 characters wide
-set cul                   " highlight current line
+" set cul                   " highlight current line
 set laststatus=2          " last window always has a statusline
 set nohlsearch            " Don't continue to highlight searched phrases.
 set incsearch             " But do highlight as you type your search.
