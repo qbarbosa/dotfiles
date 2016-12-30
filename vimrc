@@ -37,7 +37,11 @@ autocmd FileType ruby setlocal sw=2 ts=2 sts=2
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 03. Theme/Colors                                                           "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set t_Co=256              " enable 256-color mode.
+" Enable 256 colors palette in Gnome Terminal
+if $COLORTERM == 'gnome-terminal'
+  set t_Co=256
+endif
+
 syntax enable             " enable syntax highlighting (previously syntax on).
 colorscheme desert       " set colorscheme
 
@@ -77,7 +81,6 @@ set ignorecase            " Make searches case-insensitive.
 set ruler                 " Always show info along bottom.
 set showmatch
 set statusline=%<%f\%h%m%r%=%-20.(line=%l\ \ col=%c%V\ \ totlin=%L%)\ \ \%h%m%r%=%-40(bytval=0x%B,%n%Y%)\%P
-set visualbell
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
