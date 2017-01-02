@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # ls aliases
-alias ll='ls -alF'
+alias ll='ls -lF'
 alias la='ls -lA'
 alias l='ls -CF'
 
