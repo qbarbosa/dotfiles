@@ -22,7 +22,7 @@ echo "Changing to the $dir directory"
 cd $dir
 echo "...done"
 
-# move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
+# move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
 echo "Moving any existing dotfiles from ~ to $olddir"
 for file in $files; do
     if [ -f ~/.$file ]; then
@@ -64,4 +64,31 @@ else
 fi
 }
 
+config_sublime () {
+sublime_path=.config/sublime-text-3/Packages/User
+# Test to see if sublime-text-3 is installed.  If it is:
+if [ -d ~/$sublime_path ]; then
+    # If it has already been configured with a symlink
+    if [ -L ~/$sublime_path ]; then
+        echo "Sublime was already configured."
+        exit
+    else
+        # Backup old files
+        echo "Moving any Sublime preferences from ~/$sublime_path to $olddir/"
+        mkdir -p $olddir/$sublime_path
+        mv ~/$sublime_path/* $olddir/$sublime_path
+        rmdir ~/$sublime_path
+        # Linking Sublime packages and preferences to the config folder
+        echo "Creating symlink to ~/$sublime_path from $dir directory."
+        ln -s $dir/sublime/User/ ~/$sublime_path
+        echo "Sublime was successfully configured."
+        exit
+    fi
+else
+    echo "Please install Sublime Text 3 and its Package manager, then re-run this script!"
+    exit
+fi
+}
+
+config_sublime
 install_zsh
