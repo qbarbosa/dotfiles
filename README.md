@@ -26,7 +26,8 @@ Installation
 
 ``` bash
 git clone git://github.com/franklinovitch/dotfiles ~/dotfiles
-~/dotfiles/install.sh
+cd ~/dotfiles
+./install.sh
 ```
 
 *inspired by [michaeljsmalley's dotfiles repo](https://github.com/michaeljsmalley/dotfiles)*
