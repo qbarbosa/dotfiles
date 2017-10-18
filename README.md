@@ -30,4 +30,9 @@ cd ~/dotfiles
 ./install.sh
 ```
 
+Customization
+-------------
+
+If you need to add specific local aliases on your machine but know you won't want to commit them in this repo, you can create a `.localrc` file in your home directory. It will automatically be loaded by `Zsh` when starting a new tty.
+
 *inspired by [michaeljsmalley's dotfiles repo](https://github.com/michaeljsmalley/dotfiles)*
