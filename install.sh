@@ -37,13 +37,25 @@ install_zsh () {
 if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
     # Clone my oh-my-zsh repository from GitHub only if it isn't already present
     if [[ ! -d $dir/oh-my-zsh/ ]]; then
+        echo "Oh-my-zsh not installed, cloning from Github..."
         git clone http://github.com/robbyrussell/oh-my-zsh.git
+        echo "Done."
+    fi
+    # Customizing ZSH
+    if [[ ! -d $dir/oh-my-zsh/custom/themes ]]; then
+        echo "Customizing your ZSH..."
+        rm -r $dir/oh-my-zsh/custom
+        ln -s $dir/zsh-custom $dir/oh-my-zsh/custom
+        echo "Done."
     fi
     # Set the default shell to zsh if it isn't currently set to zsh
     if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
+        echo "Setting ZSH as default shell..."
         chsh -s $(which zsh)
+        echo "Done."
     fi
 else
+    echo "Installing zsh..."
     # If zsh isn't installed, get the platform of the current machine
     platform=$(uname);
     # If the platform is Linux, try an apt-get to install zsh and then recurse
@@ -62,9 +74,10 @@ else
         fi
     # If the platform is OS X, tell the user to install zsh :)
     elif [[ $platform == 'Darwin' ]]; then
-        echo "Please install zsh, then re-run this script!"
+        echo "MacOS platform: Please install zsh, then re-run this script!"
         exit
     fi
+    echo "Done."
 fi
 }
 
