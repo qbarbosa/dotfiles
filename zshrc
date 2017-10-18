@@ -84,5 +84,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Bash profile
+source ~/.bash_profile
+
 # My aliases
 source ~/.bash_aliases
