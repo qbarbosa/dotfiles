@@ -37,7 +37,7 @@ alias nowdate='date +"%d-%m-%Y"'
 
 # Humanly readable df
 alias df='df -H'
-alias du='du -chi'
+alias du='du -ch'
 alias diskspace_report="df -P -kHl"
 alias free_diskspace_report="diskspace_report"
 
@@ -47,5 +47,3 @@ alias hosts='sudo $EDITOR /etc/hosts'
 # dig IP
 alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
 
-# File size
-alias fs='stat -f "%z bytes"'
