@@ -107,5 +107,5 @@ else
 fi
 }
 
-config_sublime
 install_zsh
+config_sublime
