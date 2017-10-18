@@ -89,3 +89,8 @@ source ~/.bash_profile
 
 # My aliases
 source ~/.bash_aliases
+
+# Local aliases (you don't want to commit them on your dotfiles repo)
+if [[ -f ~/.localrc ]]; then
+    source ~/.localrc
+fi
