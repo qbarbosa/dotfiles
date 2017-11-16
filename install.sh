@@ -44,8 +44,7 @@ if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
     # Customizing ZSH
     if [[ ! -d $dir/oh-my-zsh/custom/themes ]]; then
         echo "Customizing your ZSH..."
-        rm -r $dir/oh-my-zsh/custom
-        ln -s $dir/zsh-custom $dir/oh-my-zsh/custom
+        ln -sf $dir/zsh-custom/* $dir/oh-my-zsh/custom/
         echo "Done."
     fi
     # Set the default shell to zsh if it isn't currently set to zsh
