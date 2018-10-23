@@ -1,7 +1,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   Filename: .vimrc                                                         "
 " Maintainer: Quentin Barbosa                                                "
-"        URL: http://github.com/franklinovitch/dotfiles                      "
+"        URL: http://github.com/qbarbosa/dotfiles                      "
 "                                                                            "
 "                                                                            "
 " Sections:                                                                  "
