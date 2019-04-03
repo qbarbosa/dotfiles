@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # ls aliases
-alias ll='ls -lF'
-alias la='ls -lA'
+alias ll='ls -lFh'
+alias la='ls -lAh'
 alias l='ls -CF'
 
 # Cheatcode to avoid typo
