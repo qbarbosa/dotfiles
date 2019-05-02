@@ -43,7 +43,7 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 syntax enable             " enable syntax highlighting (previously syntax on).
-colorscheme desert       " set colorscheme
+colorscheme dracula       " set colorscheme
 
 " Prettify JSON files
 autocmd BufRead,BufNewFile *.json set filetype=json
