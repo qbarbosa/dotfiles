@@ -85,10 +85,14 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Bash profile
-source ~/.bash_profile
+if [[ -f ~/.bash_profile ]]; then
+    source ~/.bash_profile
+fi
 
 # My aliases
-source ~/.bash_aliases
+if [[ -f ~/.bash_aliases ]]; then
+    source ~/.bash_aliases
+fi
 
 # Local aliases (you don't want to commit them on your dotfiles repo)
 if [[ -f ~/.localrc ]]; then
