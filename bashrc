@@ -116,9 +116,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# My aliases
-source ~/.bash_aliases
+# Defining prefered text editor
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
-# Execute ZSH
-export SHELL=$(which zsh)
-[ -z "$ZSH_VERSION" ] && exec "$SHELL" -l
