@@ -41,6 +41,9 @@ alias du='du -ch'
 alias diskspace_report="df -P -kHl"
 alias free_diskspace_report="diskspace_report"
 
+# Search in history. This can be done with Ctrl+R as well.
+alias hg='history | grep'
+
 # Quick edit hosts file
 alias hosts='sudo $EDITOR /etc/hosts'
 
