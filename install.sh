@@ -42,8 +42,10 @@ if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
         echo "Done."
     fi
     # Customizing ZSH
-    if [[ ! -d $dir/oh-my-zsh/custom/themes ]]; then
+    if [[ -f $dir/oh-my-zsh/custom/example.zsh ]]; then
         echo "Customizing your ZSH..."
+        mkdir $olddir/zsh-custom
+        mv $dir/oh-my-zsh/custom/* $olddir/zsh-custom/
         ln -sf $dir/zsh-custom/* $dir/oh-my-zsh/custom/
         echo "Done."
     fi
