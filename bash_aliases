@@ -4,6 +4,7 @@
 alias ll='ls -lFh'
 alias la='ls -lAh'
 alias l='ls -CF'
+alias lss="du -sh ./* | sort -hr" # directories sorted by size
 
 # Cheatcode to avoid typo
 alias cd..='cd ..'
@@ -44,9 +45,11 @@ alias free_diskspace_report="diskspace_report"
 # Search in history. This can be done with Ctrl+R as well.
 alias hg='history | grep'
 
+# git
+alias gitlog="git log --stat --pretty=short --graph"
+
 # Quick edit hosts file
 alias hosts='sudo $EDITOR /etc/hosts'
 
 # dig IP
 alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
-
