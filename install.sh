@@ -6,9 +6,11 @@
 
 ########## Variables
 
-dir=~/dotfiles                    # dotfiles directory
-olddir=~/.dotfiles_old             # old dotfiles backup directory
-files="bash_profile bash_aliases bashrc zshrc oh-my-zsh tmux.conf vimrc vim"    # list of files/folders to symlink in homedir
+dir=~/dotfiles
+olddir=~/.dotfiles_old
+
+# list of files/folders to symlink in homedir
+files="bash_profile bash_aliases bashrc zshrc oh-my-zsh tmux.conf vimrc vim iterm2.zsh"
 
 ##########
 
@@ -33,7 +35,7 @@ for file in $files; do
 done
 
 install_zsh () {
-# Test to see if zshell is installed.  If it is:
+# Test to see if zshell is installed. If it is:
 if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
     # Clone my oh-my-zsh repository from GitHub only if it isn't already present
     if [[ ! -d $dir/oh-my-zsh/ ]]; then
