@@ -2,8 +2,10 @@
 	"always_show_minimap_viewport": true,
 	"atomic_save": false,
 	"caret_style": "phase",
+	"caret_extra_bottom": 2,
+	"caret_extra_top": 2,
 	"close_windows_when_empty": false,
-	"color_scheme": "Packages/Materialize/schemes/Material Monokai.tmTheme",
+	"color_scheme": "Monokai.sublime-color-scheme",
 	"copy_with_empty_selection": false,
 	"default_line_ending": "unix",
 	"drag_text": false,
@@ -16,13 +18,12 @@
 		".git",
 		".hg",
 		"CVS",
-		".vagrant"
 	],
-	"font_size": 10,
+	"font_options": [ "gray_antialias"], // for MacOS Retina screens
+	"font_size": 14,
 	"highlight_line": true,
-	"ignored_packages":
-	[
-		"Vintage"
+	"ignored_packages": [
+		"Vintage",
 	],
 	"indent_guide_options":
 	[
@@ -49,5 +50,5 @@
 	"theme": "Material Monokai.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
-	"word_wrap": false
+	"word_wrap": false,
 }
