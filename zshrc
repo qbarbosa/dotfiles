@@ -80,11 +80,16 @@ export EDITOR="$VISUAL"
 # MacOS stuff:
 if [[ $(uname) == 'Darwin' ]]; then
     # key bindings
-    bindkey "/e[1~" beginning-of-line
-    bindkey "/e[4~" end-of-line
+    #bindkey "/e[1~" beginning-of-line
+    #bindkey "/e[4~" end-of-line
 
     # iTerm2 tab colors
     source ~/.iterm2.zsh
+
+    # Make Sublime Text callable from CLI
+    if [[ -d /Applications/Sublime\ Text.app ]]; then
+        export PATH=$PATH:/Applications/Sublime\ Text.app/Contents/SharedSupport/bin
+    fi
 fi
 
 # My aliases
