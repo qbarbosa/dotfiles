@@ -23,13 +23,17 @@ if [[ -n "$ITERM_SESSION_ID" ]]; then
 
     function iterm2_tab_preexec() {
         if [[ "$1" =~ "^ssh " ]]; then
-            if [[ "$1" =~ "prod" ]]; then
+            if [[ "$1" =~ "preprod" ]]; then
+                tab-color 160 160 255
+            elif [[ "$1" =~ "prod" ]]; then
                 tab-color 255 100 100
             elif [[ "$1" =~ "dev" ]]; then
                 tab-color 160 255 160
             else
                 tab-color 160 160 255
             fi
+        elif [[ "$1" =~ "vagrant ssh" ]]; then
+            tab-color 160 255 160
         #else
         #    tab-color 160 160 255
         fi
