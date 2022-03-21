@@ -47,6 +47,7 @@ alias hg='history | grep'
 
 # git
 alias gitlog="git log --stat --pretty=short --graph"
+alias oneline="git log --oneline"
 
 # Quick edit hosts file
 alias hosts='sudo $EDITOR /etc/hosts'
